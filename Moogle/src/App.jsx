@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
-import { Route } from "./components/Route";
+import { Main } from "./components/Main";
 import { BrowserRouter } from "react-router-dom";
 
 function App() {
@@ -18,9 +18,9 @@ function App() {
     <>
       <BrowserRouter>
         <div className={darkTheme ? "dark" : ""}>
-          <div className="bg-gray-200 h-screen w-screen flex flex-col dark:bg-gray-700 ">
+          <div className="bg-gray-200 h-screen w-screen flex flex-col dark:bg-gray-900 dark:text-gray-100 ">
             <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme}></Navbar>
-            <Route></Route>
+            <Main></Main>
             <Footer></Footer>
           </div>
         </div>
